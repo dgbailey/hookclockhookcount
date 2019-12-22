@@ -37,7 +37,7 @@ export const Counter = () =>{
       //e never re-apply the effect so the closure in setInterval always references the count from the first render, and count + 1 is always 1
 
     //pause
-    
+    //Never figured out pause function
 
     return(
 
