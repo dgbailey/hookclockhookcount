@@ -18,6 +18,9 @@ export const Counter = () =>{
         ref.current = callBack;
     })
 
+    //keep in mind that “tying ”tata  to any particular render is an important concept
+    //refs help here with the impedence mispatch between react and the setInterval API
+
     //use effect usually runs on every re-render unless configured otherwise
 
     //instead set interval will now call the new function object with the new closure over updated state
@@ -36,6 +39,8 @@ export const Counter = () =>{
 
       //e never re-apply the effect so the closure in setInterval always references the count from the first render, and count + 1 is always 1
 
+    //fetch can be called with async and await within the use effect.  Use effect myst return nothing or a function
+    //so the async function must be defined within use effect, and not the actual use effect function
     //pause
     //Never figured out pause function
 
